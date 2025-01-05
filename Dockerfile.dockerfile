@@ -12,11 +12,11 @@ WORKDIR /myportfollio
 RUN apt-get update && apt-get install -y \
     build-essential \
     libpq-dev \
-    mise use -g python@3.12 --verbose\
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
 COPY requirements.txt .
+RUN mise use -g python@3.12 --verbose
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy project files
