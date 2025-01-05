@@ -12,8 +12,6 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     build-essential \
     libpq-dev \
-    pyenv install 3.12.8\
-    pyenv global 3.12.8\
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
