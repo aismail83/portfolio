@@ -1,5 +1,5 @@
 # Use the official Python slim image for reduced size
-FROM python3:3.11-slim
+FROM python:3.11-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -12,6 +12,7 @@ WORKDIR /myportfollio
 RUN apt-get update && apt-get install -y \
     build-essential \
     libpq-dev \
+    mise use -g python@3.12 --verbose\
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
