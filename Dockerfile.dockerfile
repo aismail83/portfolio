@@ -16,8 +16,8 @@ RUN apt-get update && apt-get install -y \
 
 # Install Python dependencies
 COPY requirements.txt .
-RUN mise use -g python@3.12 --verbose
 RUN pip install --no-cache-dir -r requirements.txt
+RUN mise use -g python@3.12 --verbose
 
 # Copy project files
 COPY . .
