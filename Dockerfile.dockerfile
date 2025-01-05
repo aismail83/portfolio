@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install zstd && yum install zstd && apt-get instal
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --upgrade mise
+RUN mise use -g python@3.12
 
 # Copy project files
 COPY . .
