@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&t5dh!2q1j42exv-h$bvc+e^@sm^d$5@d%=+_(7i3^9gk8s35!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://altoum.f']
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
