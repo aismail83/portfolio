@@ -6,7 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Set the working directory
-WORKDIR /myportfollio
+WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install zstd && yum install zstd && apt-get install -y \
@@ -16,6 +16,8 @@ RUN apt-get update && apt-get install zstd && yum install zstd && apt-get instal
 
 # Install Python dependencies
 COPY requirements.txt .
+RUN pip uninstall mise
+RUN pip install mise
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --upgrade mise
 RUN mise use -g python@3.12
